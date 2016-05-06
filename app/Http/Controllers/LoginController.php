@@ -15,7 +15,7 @@ class LoginController extends Controller
         //return $request->all();
      
     	 //$result=Employee::Validat('admin','1234');
-         //return $result;
+         
          if($result=Employee::Validat($request->input('username'),$request->input('password'))){
             
              //return $result;
