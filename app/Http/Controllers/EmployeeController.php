@@ -16,11 +16,7 @@ class EmployeeController extends Controller
             $result=Employee::Sel_em_id($request->session()->get('em_id'));
             
             return response()->json($result);
-        }   
-        
-         //$result=Employee::Sel_em_id($request->session()->get('em_id'));
-            
-         //return response()->json($result);
+        }  
     }
     
     public function update_profile(Request $request){

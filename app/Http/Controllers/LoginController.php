@@ -38,9 +38,7 @@ class LoginController extends Controller
         
     $data = session()->flush();
        
-    //return session()->all();
-    // return response()->json(['status'=>'success']);
-    
+
     }    
   
 }
