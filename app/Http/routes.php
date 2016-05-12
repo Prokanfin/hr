@@ -20,6 +20,6 @@ Route::group(['middleware' => ['web'],'prefix' => 'api'], function () {
   Route::any('/login','LoginController@checkAuth');
   Route::any('/logout','LoginController@onLogout');
   
-  Route::any('/sel_profile','EmployeeController@sel_profile');
+  Route::any('/select_profile','EmployeeController@sel_profile');
 
 });

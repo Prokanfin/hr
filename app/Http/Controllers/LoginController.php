@@ -13,7 +13,7 @@ class LoginController extends Controller
     public function checkAuth(Request $request){
          
         //return $request->all();
-     
+      
     	 //$result=Employee::Validat('admin','1234');
          
          if($result=Employee::Validat($request->input('username'),$request->input('password'))){
@@ -23,6 +23,7 @@ class LoginController extends Controller
              $request->session()->put('em_name',$result->em_name);
              $request->session()->put('em_role',$result->em_role);
              $request->session()->put('em_number',$result->em_number);
+             $request->session()->put('company',$result->customer_id);
              
              return response()->json(['status'=>'true']);
              
