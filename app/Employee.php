@@ -23,5 +23,10 @@ class Employee extends Model
         return $result;
     }
     
+    /*public function scopeSel_em_all($query){
+        $result = $query->all();
+        
+        return $result;
+    }*/
    
 }
