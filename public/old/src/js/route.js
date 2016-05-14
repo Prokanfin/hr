@@ -1,16 +1,1 @@
-loginApp.config(function ($routeProvider){
-    $routeProvider
-            .when('/',{
-                templateUrl: 'tpl/login.html',
-                controller: 'loginAppCtrl2'
-            })
-            .when('/profile',{
-                templateUrl: 'tpl/profile.html',
-                controller: 'profileCtrl'
-            })
-            .otherwise({
-                redirectTo: '/'
-            });
-                    
-            
-});
+loginApp.config(function ($routeProvider) {    $routeProvider            .when('/', {                templateUrl: 'tpl/login.html',                controller: 'loginAppCtrl2'            })            .when('/profile', {                templateUrl: 'tpl/profile.html',                controller: 'profileCtrl'            })            .when('/dashboard', {                templateUrl: 'tpl/dash.html',                //controller: 'dashboardCtrl'            })            .otherwise({                redirectTo: '/'            });});
