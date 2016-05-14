@@ -16,9 +16,12 @@ class LoginController extends Controller
       
     	//$result=Employee::Validat('admin','1234');
          
+         
          if($result=Employee::Validat($request->input('username'),$request->input('password'))){
             
-             //return $result;
+             
+             
+
              $request->session()->put('em_id',$result->em_id);
              $request->session()->put('em_name',$result->em_name);
              $request->session()->put('em_role',$result->em_role);
@@ -26,10 +29,9 @@ class LoginController extends Controller
              $request->session()->put('company',$result->customer_id);
              
              return response()->json(['status'=>'true']);
-             
-             
-         }else{
-             return response()->json(['status'=>'false']);
+           
+             //return view('welcome')->with($result);
+            
              //return $request->session()->all();
          }	 
     }
